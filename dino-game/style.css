@@ -1,0 +1,64 @@
+/* center the game and remove margin */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* displaying the game with full screen with and bottom border as the ground */
+.game {
+    width: 100vw;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+/* sticking the dino and the cactus to the floor */
+.dino, .cactus {
+    position: absolute;
+    bottom: 0;
+}
+
+.dino {
+    left: 50px;
+}
+
+.cactus {
+    right: 0;
+    height: 50px;
+}
+
+.jump {
+    animation: dino-jump 1s;
+}
+
+.move {
+    animation: cactus-move 5s infinite;
+}
+
+@keyframes cactus-move {
+    0% {
+        right: 0px;
+    }
+
+    100% {
+        right: 150vw;
+    }
+}
+
+@keyframes dino-jump {
+    0% {
+        margin-bottom: 0;
+    }
+
+    50% {
+        margin-bottom: 250px;
+    }
+    75% {
+        margin-bottom: 200;
+    }
+
+    100% {
+        margin-bottom: 0;
+    }
+}
