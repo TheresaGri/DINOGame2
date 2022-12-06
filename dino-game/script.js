@@ -21,11 +21,10 @@ function move() {
         cactus.classList.add('move');
     }
 }
-
 setInterval(() => {
     if (isCrashed()) {
         alert('Game Over!');
-    }
+    } 
 })
 
 function isCrashed() {
@@ -34,3 +33,4 @@ function isCrashed() {
 
     return dinoPosition.right > cactusPosition.left && dinoPosition.left < cactusPosition.right && dinoPosition.bottom > cactusPosition.top;
 }
+

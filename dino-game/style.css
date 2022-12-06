@@ -1,64 +1,77 @@
 /* center the game and remove margin */
 body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 /* displaying the game with full screen with and bottom border as the ground */
 .game {
-    width: 100vw;
-    border-bottom: 1px solid black;
-    position: relative;
+  width: 100vw;
+  border-bottom: 1px solid black;
+  position: relative;
 }
 
 /* sticking the dino and the cactus to the floor */
-.dino, .cactus {
-    position: absolute;
-    bottom: 0;
+.dino,
+.cactus {
+  position: absolute;
+  bottom: 0;
 }
 
 .dino {
-    left: 50px;
+  left: 50px;
 }
 
 .cactus {
-    right: 0;
-    height: 50px;
+  right: 0;
+  height: 50px;
+}
+
+#score {
+  width: 200px;
+  right: 10px;
+  position: absolute;
+  padding: 10px;
+  top: 0px;
+  margin-top: 20px;
+  margin-right: 40px;
+  margin-bottom: 0px;
+  font-size: 20px;
 }
 
 .jump {
-    animation: dino-jump 1s;
+  animation: dino-jump 1s;
 }
 
 .move {
-    animation: cactus-move 5s infinite;
+  animation: cactus-move 5s infinite;
 }
 
 @keyframes cactus-move {
-    0% {
-        right: 0px;
-    }
+  0% {
+    right: 0px;
+  }
 
-    100% {
-        right: 150vw;
-    }
+  100% {
+    right: 120vw;
+  }
 }
 
 @keyframes dino-jump {
-    0% {
-        margin-bottom: 0;
-    }
+  0% {
+    margin-bottom: 0;
+  }
 
-    50% {
-        margin-bottom: 250px;
-    }
-    75% {
-        margin-bottom: 200;
-    }
+  50% {
+    margin-bottom: 250px;
+  }
+  75% {
+    margin-bottom: 200;
+  }
 
-    100% {
-        margin-bottom: 0;
-    }
+  100% {
+    margin-bottom: 0;
+  }
 }
