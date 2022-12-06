@@ -1,11 +1,18 @@
 const dino = document.querySelector("#dino");
 const cactus = document.querySelector("#cactus");
 const counterElement = document.querySelector("#counter");
+let main=document.getElementById("maingame")
+
+let textDiv=document.getElementById("Text")
+
 
 document.addEventListener("keydown", (event) => {
+textDiv.innerText=""
   jump(event);
   move();
 });
+
+
 
 function jump(event) {
   if (!(event.code === "Space")) {
@@ -17,17 +24,26 @@ function jump(event) {
       dino.classList.remove("jump");
     }, 1000);
   }
+  
 }
+
+
+
+
+
+
 
 function move() {
   if (!cactus.classList.contains("move")) {
     cactus.classList.add("move");
   }
 }
+
+
 setInterval(() => {
   if (isCrashed()) {
-    alert("Game Over!");
     counterElement.innerHTML = 0;
+    alert("Game Over!");
   }
 });
 
@@ -42,7 +58,8 @@ function isCrashed() {
   );
 }
 
-let toAdd = 1;
+
+    let toAdd = 1;
 let ms = 10 * 60;
 setInterval(() => {
   var count = parseFloat(counterElement.innerHTML);

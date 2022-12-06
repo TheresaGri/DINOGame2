@@ -18,7 +18,9 @@ body {
 .cactus {
   position: absolute;
   bottom: 0;
+ 
 }
+
 
 .dino {
   left: 50px;
@@ -42,11 +44,11 @@ body {
 }
 
 .jump {
-  animation: dino-jump 1s;
+  animation: dino-jump 0.9s;
 }
 
 .move {
-  animation: cactus-move 5s infinite;
+  animation: cactus-move 2.8s infinite linear;
 }
 
 @keyframes cactus-move {
@@ -55,7 +57,7 @@ body {
   }
 
   100% {
-    right: 120vw;
+    right: 150vw;
   }
 }
 
@@ -75,3 +77,13 @@ body {
     margin-bottom: 0;
   }
 }
+
+#startgame{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+  font-size:x-large;
+  flex-wrap: wrap;
+  
+}
+
